@@ -1,0 +1,251 @@
+/* main */
+body {
+  /* background-color: black; */
+  background-image: linear-gradient(to right, #208eac, #d339f5);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+body.light {
+  background-color: white;
+  color: black;
+}
+/* Small  */
+@media (min-width: 768px) {
+  .container {
+    width: 650px;
+  }
+}
+/* Medium  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container {
+  text-align: center;
+  margin: 10px auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+/* background Shapes */
+.one,
+.two,
+.three,
+.four,
+.five {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: #ffffff0d;
+  border-radius: 8px;
+  transform: rotate(50deg);
+  filter: blur(2px);
+}
+.one {
+  left: -250px;
+  top: -30px;
+}
+.three {
+  right: -150px;
+  top: 32%;
+}
+.four {
+  left: 52%;
+  top: 10px;
+}
+.five {
+  bottom: -100px;
+  left: 43%;
+}
+@media (max-width: 767px) {
+  .one,
+  .two,
+  .three,
+  .four,
+  .five {
+    display: none;
+}
+}
+#light-mode {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#light-mode i {
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  font-size: 18px;
+  transition: 0.4s;
+}
+#light-mode.active i {
+  left: 30px;
+}
+#light-mode.active {
+  background-image: linear-gradient(to right, #208eac, #d339f5);
+}
+/* start signin page */
+.row {
+  width: 380px;
+  position: relative;
+  margin: auto;
+  box-shadow: #208eac 2px 2px 2px 0px, #d339f5 -2px -2px 2px 0px;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: white;
+  color: black;
+}
+.row h1 {
+  font-weight: bold;
+  font-size: 45px;
+}
+.row .forminput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+.row .forminput label {
+  align-self: flex-start;
+  padding: 10px 15px;
+}
+.row .forminput input {
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid #eeeeeed6;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: transparent;
+}
+.row .forminput input:focus {
+  outline: none;
+}
+.btn {
+  width: 90%;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #208eac, #d339f5);
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  margin: 25px 0;
+}
+#wrong {
+  display: none;
+  color: red;
+}
+.sign {
+  font-size: 18px;
+  color: #aaa;
+}
+.sign a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #d339f5;
+}
+/* end signin page */
+
+#gender {
+  position: relative;
+  transform: translate(-120px, 0px);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+}
+#sucsses {
+  color: green;
+  font-size: 18px;
+  display: none;
+}
+
+/* start home page*/
+.row-home {
+  width: 500px;
+  height: 600px;
+  margin: auto;
+  background: inherit;
+  position: relative;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .row-home {
+    width: 85%;
+    margin: auto;
+  }
+}
+.row-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 50px 50px 2000px rgba(255, 255, 255, 0.308);
+  background: inherit;
+  filter: blur(2px);
+  border-radius: 15px;
+}
+#welcome {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+#welcome span {
+  color: black;
+}
+.row-home h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 45px;
+}
+.logout {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1;
+  /* font-weight: bold; */
+  font-size: 18px;
+}
+.logout::before {
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 0;
+  position: absolute;
+  background-image: linear-gradient(45deg, #208eaccb, #d339f5);
+  z-index: -1;
+  border-radius: inherit;
+  transition: 0.3s;
+}
+.logout:hover::before {
+  width: 100%;
+}
+/* end home page*/

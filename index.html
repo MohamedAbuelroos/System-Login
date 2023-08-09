@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link rel="stylesheet" href="main.css" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/a887e47ac3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+      <div class="four"></div>
+      
+      <!-- <div class="five"></div> -->
+      <div class="row">
+        <h1>Login</h1>
+        <button id="light-mode" onclick="changeBg()" ><i class="fa-solid fa-moon"></i></button>
+        <div class="forminput">
+          <label for="user">
+            <i class="fa-solid fa-user"></i>
+            User Name
+          </label>
+          <input type="text" id="user" placeholder="Enter Your Email" />
+          <label for="pass">
+            <i class="fa-solid fa-lock"></i>
+            Password</label>
+          <input type="password" id="pass" placeholder="Enter Your Password" />
+          <button id="signin" class="btn">Login</button>
+          <span id="wrong">Email Or Password Is Wrong</span>
+          <!-- <hr /> -->
+          <p class="sign">Don’t have an account.?<a href="signup.html">Signup</a></p>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
